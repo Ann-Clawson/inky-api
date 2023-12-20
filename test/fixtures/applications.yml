@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  tattooer_id: MyString
+  amount: 1
+  number_of_months: 1
+  date_of_appt: 2023-12-20
+  approved: false
+
+two:
+  user_id: MyString
+  tattooer_id: MyString
+  amount: 1
+  number_of_months: 1
+  date_of_appt: 2023-12-20
+  approved: false
