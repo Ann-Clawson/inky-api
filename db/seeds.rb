@@ -14,6 +14,6 @@
 #   { last_name: "Davis", first_name: "Jen", email: "jen@jen.com", user_name: "JenDavis", password: "password", address: "123 Main St.", phone_number: "555-4321", tattoo_shop: "Outer Limits" },
 # ])
 
-Application.create!([
-  { user_id: 1, tattooer_id: 1, amount: 100, number_of_months: 5, date_of_appt: "01/01/24", approved: true, description: "butterfly" },
-])
+# Application.create!([
+#   { user_id: 1, tattooer_id: 1, amount: 100, number_of_months: 5, date_of_appt: "01/01/24", approved: true, description: "butterfly" },
+# ])

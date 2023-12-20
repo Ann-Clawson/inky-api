@@ -6,7 +6,7 @@ one:
   email: MyString
   user_name: MyString
   password_digest: MyString
-  adress: MyString
+  address: MyString
   phone_number: MyString
   tattoo_shop: MyString
 
@@ -16,6 +16,6 @@ two:
   email: MyString
   user_name: MyString
   password_digest: MyString
-  adress: MyString
+  address: MyString
   phone_number: MyString
   tattoo_shop: MyString
