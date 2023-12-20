@@ -1,0 +1,2 @@
+class Tattooer < ApplicationRecord
+end

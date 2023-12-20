@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_20_195456) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_20_200114) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "tattooers", force: :cascade do |t|
+    t.string "last_name"
+    t.string "first_name"
+    t.string "email"
+    t.string "user_name"
+    t.string "password_digest"
+    t.string "address"
+    t.string "phone_number"
+    t.string "tattoo_shop"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "last_name"
