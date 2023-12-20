@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_20_201210) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_20_215200) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "applications", force: :cascade do |t|
-    t.string "user_id"
-    t.string "tattooer_id"
     t.integer "amount"
     t.integer "number_of_months"
-    t.date "date_of_appt"
     t.boolean "approved"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+    t.string "date_of_appt"
+    t.integer "user_id"
+    t.integer "tattooer_id"
   end
 
   create_table "tattooers", force: :cascade do |t|
