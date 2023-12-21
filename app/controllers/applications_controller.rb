@@ -1,6 +1,4 @@
 class ApplicationsController < ApplicationController
-  # before_action :authenticate_user
-
   def create
     @application = Application.new(
       user_id: current_user.id,
