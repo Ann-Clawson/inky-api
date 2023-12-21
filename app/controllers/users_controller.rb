@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       user_name: params[:user_name],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
+      admin: params[:admin] || false,
 
     )
     if user.save
@@ -16,5 +17,17 @@ class UsersController < ApplicationController
     else
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
+  end
+
+  def update
+  end
+
+  def delete
+  end
+
+  def show
+  end
+
+  def index
   end
 end
