@@ -1,5 +1,5 @@
 class ApplicationsController < ApplicationController
-  before_action :authenticate_user
+  # before_action :authenticate_user
 
   def create
     @application = Application.new(
@@ -19,7 +19,7 @@ class ApplicationsController < ApplicationController
   end
 
   def update
-    @application = Application.find_by(id: params[:id])
+    @application = current_user.applications.find_by(id: params[:id])
     @application.update(
       tattooer_id: params[:tattooer_id] || @application.tattooer_id,
       amount: params[:amount] || @application.amount,
@@ -36,18 +36,32 @@ class ApplicationsController < ApplicationController
   end
 
   def destroy
-    @application = Application.find_by(id: params[:id])
+    @application = current_user.applications.find_by(id: params[:id])
     @application.destroy
     render json: { message: "Application successfully deleted" }
   end
 
   def show
-    @application = Application.find_by(id: params[:id])
-    render :show
+    if current_user
+      @application = current_user.applications.find_by(id: params[:id])
+      render :show
+    elsif current_tattooer
+      @application = current_tattooer.applications.find_by(id: params[:id])
+      render :show
+    else
+      render json: { message: "Log in, bruh." }
+    end
   end
 
   def index
-    @applications = Application.all
-    render :index
+    if current_user
+      @applications = current_user.applications.all
+      render :index
+    elsif current_tattooer
+      @applications = current_tattooer.applications.all
+      render :index
+    else
+      render json: { message: "Log in, bro!" }
+    end
   end
 end
