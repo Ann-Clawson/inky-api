@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_admin, except: [:create, :update, :show, :delete]
   before_action :authenticate_user, except: [:create]
-
-  # def initialize(user)
-  #   can :manage, :all if user.admin == true
-  # end
 
   def create
     @user = User.new(

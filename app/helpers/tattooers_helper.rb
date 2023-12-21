@@ -1,0 +1,2 @@
+module TattooersHelper
+end
