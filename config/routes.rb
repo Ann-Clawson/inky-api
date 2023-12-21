@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   get "/tattooers/:id" => "tattooers#show"
   get "/tattooers" => "tattooers#index"
 
+  post "/applications" => "applications#create"
+  patch "/applications/:id" => "applications#update"
+  delete "/applications/:id" => "applications#destroy"
+  get "/applications/:id" => "applications#show"
+  get "/applications" => "applications#index"
+
   post "/sessions" => "sessions#create"
   post "/tattooer_sessions" => "tattooer_sessions#create"
 end
