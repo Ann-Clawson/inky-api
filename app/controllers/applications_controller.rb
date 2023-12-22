@@ -7,7 +7,7 @@ class ApplicationsController < ApplicationController
       number_of_months: params[:number_of_months],
       date_of_appt: params[:date_of_appt],
       description: params[:description],
-      approved: params[:approved],
+      approved: params[:approved] || false,
     )
     if @application.save
       render json: { message: "Application created successfully" }, status: :created
