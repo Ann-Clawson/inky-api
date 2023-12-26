@@ -6,10 +6,8 @@ class TattooersController < ApplicationController
       last_name: params[:last_name],
       first_name: params[:first_name],
       email: params[:email],
-      address: params[:address],
       phone_number: params[:phone_number],
       tattoo_shop: params[:tattoo_shop],
-      user_name: params[:user_name],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
     )
@@ -21,19 +19,19 @@ class TattooersController < ApplicationController
   end
 
   def update
+    pp current_tattooer
     @tattooer = Tattooer.find_by(id: current_tattooer.id)
+    pp @tattooer
     @tattooer.update(
       last_name: params[:last_name] || @tattooer.last_name,
       first_name: params[:first_name] || @tattooer.first_name,
       email: params[:email] || @tattooer.email,
-      address: params[:address] || @tattooer.address,
       phone_number: params[:phone_number] || @tattooer.phone_number,
       tattoo_shop: params[:tattoo_shop] || @tattooer.tattoo_shop,
-      user_name: params[:user_name] || @tattooer.user_name,
       password: params[:password] || @tattooer.password,
       password_confirmation: params[:password_confirmation] || @tattooer.password_confirmation,
     )
-    if @tattooer.valid?
+    if @tattooer.save
       render :show
     else
       render json: { errors: @tattooer.errors.full_messages }, status: :unprocessable_entity

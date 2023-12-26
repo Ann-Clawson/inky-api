@@ -8,7 +8,6 @@ class UsersController < ApplicationController
       email: params[:email],
       address: params[:address],
       phone_number: params[:phone_number],
-      user_name: params[:user_name],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
       admin: params[:admin] || false,
@@ -28,7 +27,6 @@ class UsersController < ApplicationController
       email: params[:email] || @user.email,
       address: params[:address] || @user.address,
       phone_number: params[:phone_number] || @user.phone_number,
-      user_name: params[:user_name] || @user.user_name,
       password: params[:password] || @user.password,
       password_confirmation: params[:password_confirmation] || @user.password_confirmation,
     )
