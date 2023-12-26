@@ -1,5 +1,5 @@
 class TattooersController < ApplicationController
-  before_action :authenticate_tattooer, except: [:create]
+  before_action :authenticate_tattooer, except: [:create, :index]
 
   def create
     @tattooer = Tattooer.new(

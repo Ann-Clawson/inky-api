@@ -2,13 +2,14 @@ class ApplicationsController < ApplicationController
   def create
     @application = Application.new(
       user_id: current_user.id,
-      tattooer_id: params[:tattooer_id],
+      tattooer_id: (Tattooer.find_by(first_name: params[:tattooer_id]).id),
       amount: params[:amount],
       number_of_months: params[:number_of_months],
       date_of_appt: params[:date_of_appt],
       description: params[:description],
       approved: params[:approved] || false,
     )
+
     if @application.save
       render json: { message: "Application created successfully" }, status: :created
     else
