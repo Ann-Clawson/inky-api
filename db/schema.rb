@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_05_195217) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_05_201311) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,7 +24,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_05_195217) do
     t.string "date_of_appt"
     t.integer "user_id"
     t.integer "tattooer_id"
-    t.integer "interest_rate"
   end
 
   create_table "tattooers", force: :cascade do |t|
