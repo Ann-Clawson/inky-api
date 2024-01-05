@@ -8,6 +8,7 @@ class ApplicationsController < ApplicationController
       date_of_appt: params[:date_of_appt],
       description: params[:description],
       approved: params[:approved] || false,
+      interest_rate: params[:interest_rate],
     )
 
     if @application.save
