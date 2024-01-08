@@ -9,6 +9,7 @@ class ApplicationsController < ApplicationController
       description: params[:description],
       approved: params[:approved] || false,
       interest_rate: params[:interest_rate],
+      monthly_payment: params[:monthly_payment],
     )
 
     if @application.save
@@ -36,7 +37,7 @@ class ApplicationsController < ApplicationController
   end
 
   def destroy
-    @application = current_user.applications.find_by(id: params[:id])
+    @application = Application.find_by(id: params[:id])
     @application.destroy
     render json: { message: "Application successfully deleted" }
   end
