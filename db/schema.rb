@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_05_202111) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_08_180049) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_05_202111) do
     t.integer "user_id"
     t.integer "tattooer_id"
     t.decimal "interest_rate", precision: 3, scale: 2
+    t.decimal "monthly_payment", precision: 6, scale: 2
   end
 
   create_table "tattooers", force: :cascade do |t|

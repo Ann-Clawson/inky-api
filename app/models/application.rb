@@ -5,6 +5,6 @@ class Application < ApplicationRecord
   validates :number_of_months, presence: true
 
   def friendly_created_at
-    created_at.strftime("%A, %d %b %Y %l:%M %p")
+    created_at.strftime("%A, %d %b %Y")
   end
 end
