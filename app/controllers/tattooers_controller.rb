@@ -49,6 +49,10 @@ class TattooersController < ApplicationController
     render :show
   end
 
+  # def show_app_tattooer
+  #   @tattooer = Tattooer.find_by(id: params[:id])
+  # end
+
   def index
     @tattooers = Tattooer.all
     render :index
