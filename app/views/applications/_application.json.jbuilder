@@ -7,6 +7,7 @@ json.date_of_appt application.date_of_appt
 json.approved application.approved
 json.description application.description
 json.monthly_payment application.monthly_payment
+json.interest_rate application.interest_rate
 json.friendly_created_at application.friendly_created_at
 json.created_at application.created_at
 json.updated_at application.updated_at
