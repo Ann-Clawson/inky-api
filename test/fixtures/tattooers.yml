@@ -4,9 +4,7 @@ one:
   last_name: MyString
   first_name: MyString
   email: MyString
-  user_name: MyString
   password_digest: MyString
-  address: MyString
   phone_number: MyString
   tattoo_shop: MyString
 
@@ -14,8 +12,6 @@ two:
   last_name: MyString
   first_name: MyString
   email: MyString
-  user_name: MyString
   password_digest: MyString
-  address: MyString
   phone_number: MyString
   tattoo_shop: MyString
