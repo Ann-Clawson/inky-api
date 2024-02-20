@@ -19,6 +19,4 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
   post "/tattooer_sessions" => "tattooer_sessions#create"
-
-  # get "/apptattooer/:id" => "tattooers#show_app_tattooer"
 end
