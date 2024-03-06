@@ -47,6 +47,8 @@ gem "jwt"
 # installs CORS for resource sharing
 gem "rack-cors"
 
+gem "seed_dump", "~> 3.2", ">= 3.2.4"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
